@@ -1,0 +1,6 @@
+proto < ../profile-service-grpc/src/main/proto/profile-service.proto
+
+GRPC localhost:9010/ProfileService/CreateProfile
+{
+  "name": "profile-test-name"
+}

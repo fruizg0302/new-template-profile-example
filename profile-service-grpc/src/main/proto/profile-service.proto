@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.paloit.profile.grpc";
+option java_outer_classname = "ProfileStubs";
+
+package com.paloit.profile.grpc;
+
+import "google/protobuf/wrappers.proto";
+
+service ProfileService {
+    rpc CreateProfile (ProfileDto) returns (CreateProfileResponse);
+    rpc GetProfiles (GetProfilesRequest) returns (GetProfilesResponse);
+    rpc GetProfile (GetProfileRequest) returns (GetProfileResponse);
+    rpc UpdateProfile (ProfileDto) returns (UpdateProfileResponse);
+
+    /*Card service*/
+    rpc CreateCard (GrpcCreateCardRequest) returns (GrpcCreateCardResponse);
+}
+
+message ProfileDto {
+    google.protobuf.StringValue id = 1;
+    string name = 2;
+    string cardId = 3;
+}
+
+message GetProfileRequest {
+    string id = 1;
+}
+
+message GetProfileResponse {
+        ProfileDto profile = 1;
+}
+
+message GetProfilesRequest {
+    int32 start_page = 1;
+    int32 page_size = 2;
+}
+
+message GetProfilesResponse {
+    repeated ProfileDto profile = 1;
+    bool has_next = 2;
+    bool has_previous = 3;
+    int32 next_page = 4;
+    int32 previous_page = 5;
+    int32 total_pages = 6;
+    int64 total_elements = 7;
+}
+
+message UpdateProfileResponse {
+
+}
+
+message CreateProfileResponse {
+    ProfileDto profile = 1;
+}
+
+message GrpcCreateCardRequest {
+    string name = 2;
+}
+
+message GrpcCreateCardResponse {
+    CardDto card = 1;
+}
+
+message CardDto {
+    google.protobuf.StringValue id = 1;
+    string name = 2;
+}
+
+

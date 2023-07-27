@@ -1,0 +1,10 @@
+@host=http://localhost:9011
+
+### Actuator Health
+GET /actuator/health
+### Actuator Info
+GET /actuator/info
+### Actuator Metrics
+GET /actuator/metrics
+### Actuator Prometheus
+GET /actuator/prometheus
