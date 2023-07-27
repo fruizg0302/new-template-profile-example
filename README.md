@@ -1,6 +1,6 @@
 # Profile Service
 
-Profile Service is responsible to << CHANGE ME  write here the motivation and responsibility to create this project >> 
+Profile Service is responsible to showcase the new template for projects implementing an H2 In Memory database for a Profile instance
 
 This project was build based on PaloIT templates. 
 
