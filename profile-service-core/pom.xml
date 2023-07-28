@@ -27,5 +27,10 @@
             <artifactId>profile-service-grpc</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.paloit.card-service</groupId>
+            <artifactId>card-service-clients</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

@@ -28,6 +28,7 @@ public class ProfileEntity {
     private String status;
     private Instant lastModifiedDatetime;
     private Instant createdDatetime;
+    private String cardId;
 
     @Version
     protected Short version;

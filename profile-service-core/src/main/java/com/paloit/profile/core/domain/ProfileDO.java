@@ -13,4 +13,5 @@ public class ProfileDO {
   private ProfileStatus status;
   private Instant createdDatetime;
   private Instant lastModifiedDatetime;
+  private String cardId;
 }

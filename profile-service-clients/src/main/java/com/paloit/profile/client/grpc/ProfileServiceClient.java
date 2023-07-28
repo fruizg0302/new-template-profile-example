@@ -32,6 +32,4 @@ public class ProfileServiceClient  {
         return stub.updateProfile(profile);
     }
 
-    public GrpcCreateCardResponse createCard(GrpcCreateCardRequest request) { return stub.createCard(request); }
-
 }

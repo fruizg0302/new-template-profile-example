@@ -24,7 +24,8 @@ public class ProfileServiceGrpcImpl extends ProfileServiceGrpc.ProfileServiceImp
         CreateProfileResponse createProfileResponse = CreateProfileResponse.newBuilder()
                                                     .setProfile(mapper.fromDomainToProfileDto(response) )
                                                     .build();
-        //GrpcCreateCardResponse createCardResponse = GrpcCreateCardResponse.newBuilder().setCard().build();
+
+
 
         responseObserver.onNext(createProfileResponse);
         responseObserver.onCompleted();
